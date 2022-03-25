@@ -25,4 +25,7 @@ static string CamelToKebab(string input)
     return sb.ToString();
 }
 
-Console.WriteLine(CamelToKebab("helloWorld")); 
+Console.WriteLine("Please write variable in camelCase");
+string camel = Console.ReadLine();
+
+Console.WriteLine(CamelToKebab(camel)); 
