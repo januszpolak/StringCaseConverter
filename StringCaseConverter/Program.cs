@@ -28,4 +28,30 @@ static string CamelToKebab(string input)
 Console.WriteLine("Please write variable in camelCase");
 string input = Console.ReadLine();
 
-Console.WriteLine(CamelToKebab(input)); 
+Console.WriteLine(CamelToKebab(input));
+
+
+static string KebabToCamel(string input2)
+{
+    StringBuilder sb = new StringBuilder();
+    foreach (var currentChar in input2)
+    {
+        if (currentChar != '-')
+        {
+            sb.Append(currentChar);
+
+        }
+        else
+        {
+            sb.Replace('-', char.ToUpper(currentChar));
+            
+        }
+    }
+
+    return sb.ToString();
+}
+
+Console.WriteLine("Please write variable in kebabCase");
+string input2 = Console.ReadLine();
+
+Console.WriteLine(KebabToCamel(input2));
